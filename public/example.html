@@ -1,4 +1,11 @@
-/* ====== VARIABLES Y RESET ====== */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador de Comidas Saludables</title>
+    <style>
+        /* ====== VARIABLES Y RESET ====== */
         :root {
             /* Colores modo claro */
             --bg-primary: #f0fff4;
@@ -319,3 +326,120 @@
         .plan:nth-child(3) {
             animation-delay: 0.2s;
         }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <button class="theme-toggle" aria-label="Cambiar modo claro/oscuro">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+        <div class="logo-container">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJlODU1YSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiAyMHM4LTQgOC0xMFY1bC00LjktMi40YTMuNjUgMy42NSAwIDAgMC0zLjggMGwtNS4xIDIuNCI+PC9wYXRoPjxwYXRoIGQ9Ik0yIDhsOC00IDggNCI+PC9wYXRoPjxwYXRoIGQ9Ik0xMiA0djQiPjwvcGF0aD48cGF0aCBkPSJNNyAxNGwtMyAzIj48L3BhdGg+PHBhdGggZD0iTTE3IDE0bDMgMyI+PC9wYXRoPjxwYXRoIGQ9Ik0xMCAxOGg0Ij48L3BhdGg+PC9zdmc+" alt="Logo" class="logo">
+        </div>
+        <h1 class="title">Planificador de <span>Comidas</span></h1>
+        <p class="subtitle">Organiza tu alimentación semanal con opciones saludables y balanceadas</p>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        <!-- Formulario -->
+        <div class="form-container">
+            <h2>Personaliza tu plan</h2>
+            <!-- Aquí irían los campos del formulario -->
+            <p style="text-align: center; color: var(--text-secondary);">Formulario de preferencias alimenticias</p>
+        </div>
+
+        <!-- Resultados -->
+        <h2 class="results-title">Tu Plan Semanal</h2>
+        <div class="result-grid">
+            <!-- Plan 1 -->
+            <div class="plan">
+                <div class="plan-header">
+                    <h3>Lunes</h3>
+                </div>
+                <div class="plan-content">
+                    <div class="meal">
+                        <div class="meal-title">Desayuno</div>
+                        <div class="meal-content">Avena con frutos rojos y nueces</div>
+                    </div>
+                    <div class="meal">
+                        <div class="meal-title">Almuerzo</div>
+                        <div class="meal-content">Ensalada de quinoa con vegetales asados</div>
+                    </div>
+                    <div class="meal">
+                        <div class="meal-title">Cena</div>
+                        <div class="meal-content">Salmón al horno con espárragos</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="plan">
+                <div class="plan-header">
+                    <h3>Martes</h3>
+                </div>
+                <div class="plan-content">
+                    <div class="meal">
+                        <div class="meal-title">Desayuno</div>
+                        <div class="meal-content">Smoothie bowl de espinacas y plátano</div>
+                    </div>
+                    <div class="meal">
+                        <div class="meal-title">Almuerzo</div>
+                        <div class="meal-content">Wrap de pollo con aguacate y vegetales</div>
+                    </div>
+                    <div class="meal">
+                        <div class="meal-title">Cena</div>
+                        <div class="meal-content">Lentejas estofadas con verduras</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="plan">
+                <div class="plan-header">
+                    <h3>Miércoles</h3>
+                </div>
+                <div class="plan-content">
+                    <div class="meal">
+                        <div class="meal-title">Desayuno</div>
+                        <div class="meal-content">Tostadas integrales con aguacate y huevo</div>
+                    </div>
+                    <div class="meal">
+                        <div class="meal-title">Almuerzo</div>
+                        <div class="meal-content">Bowl de arroz integral con tofu y vegetales</div>
+                    </div>
+                    <div class="meal">
+                        <div class="meal-title">Cena</div>
+                        <div class="meal-content">Crema de calabacín y zanahoria</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2023 Planificador de Comidas Saludables - Diseñado para tu bienestar</p>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidad para el botón de modo oscuro/claro
+        document.querySelector('.theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // Cambiar ícono según el modo
+            const icon = this.querySelector('svg');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.innerHTML = '<path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/>';
+            } else {
+                icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            }
+        });
+    </script>
+</body>
+</html>

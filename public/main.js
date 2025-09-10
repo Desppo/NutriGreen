@@ -1,8 +1,16 @@
 // Modo oscuro
-const darkModeBtn = document.getElementById("darkModeToggle");
-darkModeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-});
+
+document.querySelector('.theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // Cambiar ícono según el modo
+            const icon = this.querySelector('svg');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.innerHTML = '<path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/>';
+            } else {
+                icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            }
+        });
 
 // Obtener dieta
 async function getDiet() {
