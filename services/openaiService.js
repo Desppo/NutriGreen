@@ -5,6 +5,7 @@ const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 export async function generateDietPlan(calories = 2000, diet = "normal") {
+
   const prompt = `
     Genera **dos planes de dieta equilibrada** diferentes con desayuno, almuerzo y cena.
     Calorías aproximadas: ${calories}.

@@ -9,6 +9,14 @@ async function getDiet() {
   const calories = document.getElementById("calories").value || 2000;
   const diet = document.getElementById("diet").value;
 
+  if (isNaN(calories)) {
+    alert("Por favor ingresa un número válido.");
+    return;
+  }
+
+  if (calories < 1200) calories = 1200;
+  if (calories > 2500) calories = 2500;
+
   const resultDiv = document.getElementById("result");
   resultDiv.style.display = "block";
   resultDiv.innerHTML = `<p>Cargando planes de dieta...</p>`;
