@@ -302,6 +302,48 @@
             }
         }
 
+        #btn_generarDieta {
+          background: linear-gradient(135deg, #2f855a 0%, #38a169 100%);
+          color: white;
+          border: none;
+          padding: 14px 28px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          border-radius: 12px;
+          cursor: pointer;
+          box-shadow: 0 4px 12px rgba(47, 133, 90, 0.3);
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          letter-spacing: 0.5px;
+        }
+
+        #btn_generarDieta:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 16px rgba(47, 133, 90, 0.4);
+          background: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
+        }
+
+        #btn_generarDieta:active {
+          transform: translateY(1px);
+          box-shadow: 0 2px 8px rgba(47, 133, 90, 0.4);
+        }
+
+        #btn_generarDieta::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transition: left 0.7s ease;
+        }
+
+        #btn_generarDieta:hover::before {
+          left: 100%;
+        }
+
         /* ====== ANIMACIONES ====== */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
