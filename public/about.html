@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>NutriGreen - About</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon.png" type="image/png">
+    </head>
+    <body>
+    <header class="header">
+        <img src="favicon.png" alt="Logo NutriGreen" class="logo">
+        <button class="theme-toggle" aria-label="Cambiar modo claro/oscuro">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        </button>
+        <h1 class="title">Nutri<span>Green</span></h1>
+        <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="about.html" class="active">About NutriGreen</a>
+        </nav>
+        <p class="subtitle">Tu recomendador inteligente de planes de dieta</p>
+    </header>
+
+    <main class="main-container">
+        <section class="about">
+        <h2>¿Qué es NutriGreen?</h2>
+        <p>
+            NutriGreen es una aplicación web experimental diseñada con fines educativos, 
+            informativos y de entretenimiento. La finalidad principal es ofrecer 
+            recomendaciones orientativas de planes de alimentación generados mediante un modelo 
+            de inteligencia artificial (IA) de <a href="https://groq.com/" target="_blank">Groq</a> llama-3.3-70b-versatile.
+        </p>
+
+        <h3>⚠️ Aviso importante ⚠️</h3>
+        <p>
+            La información ofrecida en esta plataforma <strong>no sustituye en ningún caso la consulta profesional</strong> 
+            con un médico, nutricionista titulado u otro profesional de la salud.  
+            No debe utilizarse como diagnóstico, tratamiento ni prescripción médica.  
+            Antes de realizar cambios significativos en la dieta, el ejercicio o estilo de vida, 
+            consulte siempre con un especialista acreditado.
+        </p>
+
+        <h3>🛡️ Limitación de responsabilidad 🛡️</h3>
+        <p>
+            El equipo de NutriGreen y sus colaboradores no se responsabilizan por decisiones, 
+            acciones o consecuencias derivadas del uso de los planes de dieta sugeridos por la aplicación.  
+            Toda la información debe considerarse como <em>orientativa y no vinculante</em>.
+        </p>
+
+        <h3>📌 Propiedad intelectual y uso de tecnologías 📌</h3>
+        <ul>
+            <li>El motor de generación de texto está basado en la API de Groq, 
+                que utiliza modelos de lenguaje avanzados para crear recomendaciones automáticas.</li>
+            <li>El proyecto está desplegado mediante Render, plataforma de hosting en la nube.</li>
+            <li>El código y diseño de NutriGreen son propiedad de su desarrollador y están protegidos 
+                por la legislación sobre derechos de autor.</li>
+            <li>Las marcas y logotipos de terceros mencionados (Groq, Render, etc.) pertenecen a sus respectivos titulares 
+                y se utilizan únicamente con fines descriptivos.</li>
+        </ul>
+
+        <h3>📅 Estado del proyecto 📅</h3>
+        <p>
+            Este sitio se encuentra en fase de desarrollo.  
+            Puede contener errores, limitaciones técnicas y cambios frecuentes en su funcionamiento.
+        </p>
+
+        <h3>📧 Contacto 📧</h3>
+        <p>
+            Para cualquier duda, sugerencia o incidencia legal relacionada con NutriGreen, 
+            puedes escribir a: <a href="mailto:soporte.nutrigreen@outlook.es">soporte.nutrigreen@outlook.es</a>
+        </p>
+        </section>
+        <section class="contact">
+            <h3>Contacta con el Soporte de NutriGreen</h3>
+            
+            <div class="contact-info">
+                <p><i>📧</i> <strong>Email:</strong> soporte.nutrigreen@outlook.es</p>
+                <p><i>⏱️</i> <strong>Respuesta:</strong> En menos de 24 horas</p>
+                <p><i>🌱</i> Estamos aquí para ayudarte con cualquier consulta sobre nutrición y productos naturales.</p>
+            </div>
+            
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nombre completo:</label>
+                        <input type="text" id="name" placeholder="Tu nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Tu email:</label>
+                        <input type="email" id="email" placeholder="ejemplo@email.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Asunto:</label>
+                    <select id="subject" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Consulta sobre productos">Consulta sobre productos</option>
+                        <option value="Problema con mi pedido">Problema con mi pedido</option>
+                        <option value="Información nutricional">Información nutricional</option>
+                        <option value="Sugerencia o mejora">Sugerencia o mejora</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" placeholder="Describe tu consulta o problema aquí..." required></textarea>
+                </div>
+                
+                <button class="btn_send" type="submit">Enviar mensaje</button>
+            </form>
+            
+            <div id="notification" class="notification"></div>
+        </section>
+        <script src="nutrigreen-contact.js"></script>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 NutriGreen · Alimentación saludable asistida por IA</p>
+    </footer>
+
+    <script src="main.js"></script>
+    </body>
+</html>
