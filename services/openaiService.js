@@ -29,7 +29,6 @@ export async function generateDietPlan(calories = 2000, diet = "normal") {
         messages: [{ role: "user", content: prompt }],
         temperature: 0.7,
         max_completion_tokens: 700
-        // 👆 quitamos response_format
       })
     });
 
@@ -43,7 +42,7 @@ export async function generateDietPlan(calories = 2000, diet = "normal") {
     const text = data.choices[0].message.content.trim();
 
     console.log("Respuesta cruda:", text);
-    return JSON.parse(text); // ahora será un array con 2 dietas
+    return JSON.parse(text); //array con 2 dietas
 
   } catch (error) {
     console.error("Error completo con Groq API:", error.message);

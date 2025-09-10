@@ -4,7 +4,7 @@ darkModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
 
-// Función para obtener dieta
+// Obtener dieta
 async function getDiet() {
   const calories = document.getElementById("calories").value || 2000;
   const diet = document.getElementById("diet").value;
@@ -17,7 +17,6 @@ async function getDiet() {
     const response = await fetch(`/diet?calories=${calories}&diet=${diet}`);
     const data = await response.json();
 
-    // Aquí recorremos el array de opciones
     resultDiv.innerHTML = `<h2 class="fade-in">${data.message}</h2>`;
 
     data.options.forEach((plan, index) => {
