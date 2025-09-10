@@ -505,6 +505,70 @@
             box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.4);
         }
 
+        /* ====== MODO OSCURO PARA CONTACTO ====== */
+        .dark-mode .contact {
+            background: linear-gradient(135deg, #1a2c1a 0%, #2d3748 100%);
+            border-left: 5px solid #4caf50;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode .contact h3 {
+            color: #68d391;
+        }
+
+        .dark-mode .contact h3:after {
+            background-color: #68d391;
+        }
+
+        .dark-mode .contact-info {
+            background-color: #2d3748;
+            border-left: 4px solid #4caf50;
+        }
+
+        .dark-mode .contact-info p {
+            color: #e2e8f0;
+        }
+
+        .dark-mode .contact-info i {
+            color: #68d391;
+        }
+
+        .dark-mode .form-group label {
+            color: #68d391;
+        }
+
+        .dark-mode input, 
+        .dark-mode textarea, 
+        .dark-mode select {
+            background-color: #2d3748;
+            border: 1px solid #4a5568;
+            color: #e2e8f0;
+        }
+
+        .dark-mode input:focus, 
+        .dark-mode textarea:focus, 
+        .dark-mode select:focus {
+            border-color: #68d391;
+            box-shadow: 0 0 0 2px rgba(104, 211, 145, 0.2);
+        }
+
+        /* Ajustes específicos para el botón en modo oscuro */
+        .dark-mode .btn_send {
+            background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 
+                        0 1px 3px rgba(0, 0, 0, 0.15);
+        }
+
+        .dark-mode .btn_send:hover {
+            box-shadow: 0 7px 14px rgba(47, 133, 90, 0.4), 
+                        0 3px 6px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+        }
+
+        .dark-mode .btn_send:active {
+            box-shadow: 0 2px 4px rgba(47, 133, 90, 0.3);
+        }
+
         /* ====== ANIMACIONES ====== */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
