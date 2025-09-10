@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode {
+  background: #1a202c;
+  color: #e2e8f0;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3748;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+body.dark-mode .form-container {
+  background: #2d3748;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+  background: #4a5568;
+  color: #edf2f7;
+  border: 1px solid #718096;
+}
+
+button {
+  background: #3182ce;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+button:hover {
+  background: #2b6cb0;
+}
+
+.result {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #edf2f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+body.dark-mode .result {
+  background: #2d3748;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.meal {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+body.dark-mode .meal {
+  background: #4a5568;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para el icono dentro del título */
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* espacio entre icono y texto */
+}
+
+.page-icon {
+  width: 48px;      /* tamaño del icono */
+  height: 48px;
+  border-radius: 12px; /* bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+/* Animación al pasar el cursor */
+.page-icon:hover {
+  transform: rotate(15deg) scale(1.1);
+}

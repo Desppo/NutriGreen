@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HealthWEB</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+  <h1 class="title">
+    <img src="favicon.png" alt="Icono Saludable" class="page-icon">
+    Recomendador de Dieta
+  </h1>
+
+  <button id="darkModeToggle">🌙 Modo Oscuro</button>
+
+  <div class="form-container">
+    <label for="calories">Calorías deseadas:</label>
+    <input type="number" id="calories" placeholder="Ej: 2000">
+
+    <label for="diet">Tipo de dieta:</label>
+    <select id="diet">
+      <option value="normal">Normal</option>
+      <option value="vegan">Vegana</option>
+      <option value="vegetarian">Vegetariana</option>
+      <option value="keto">Keto</option>
+    </select>
+
+    <button>Generar dieta</button>
+  </div>
+
+  <div id="result" class="result" style="display:none;"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
