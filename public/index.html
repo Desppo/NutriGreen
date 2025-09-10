@@ -2,34 +2,42 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>HealthWEB</title>
+  <title>NutriGreen - Recomendador de Dieta</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-  <h1 class="title">
-    <img src="favicon.png" alt="Icono Saludable" class="page-icon">
-    Recomendador de Dieta
-  </h1>
+  <header class="header">
+    <img src="favicon.png" alt="Logo NutriGreen" class="logo">
+    <h1 class="title">Nutri<span>Green</span></h1>
+    <p class="subtitle">Tu recomendador inteligente de planes de dieta</p>
+  </header>
 
-  <button id="darkModeToggle">🌙 Modo Oscuro</button>
+  <main class="main-container">
+    <button id="darkModeToggle" class="dark-btn">🌙 Modo Oscuro</button>
 
-  <div class="form-container">
-    <label for="calories">Calorías deseadas:</label>
-    <input type="number" id="calories" placeholder="Ej: 2000">
+    <div class="form-container">
+      <h2>Genera tu plan personalizado</h2>
+      <label for="calories">Calorías deseadas:</label>
+      <input type="number" id="calories" placeholder="Ej: 2000">
 
-    <label for="diet">Tipo de dieta:</label>
-    <select id="diet">
-      <option value="normal">Normal</option>
-      <option value="vegan">Vegana</option>
-      <option value="vegetarian">Vegetariana</option>
-      <option value="keto">Keto</option>
-    </select>
+      <label for="diet">Tipo de dieta:</label>
+      <select id="diet">
+        <option value="normal">Normal</option>
+        <option value="vegan">Vegana</option>
+        <option value="vegetarian">Vegetariana</option>
+        <option value="keto">Keto</option>
+      </select>
 
-    <button>Generar dieta</button>
-  </div>
+      <button>Generar dieta</button>
+    </div>
 
-  <div id="result" class="result" style="display:none;"></div>
+    <div id="result" class="result" style="display:none;"></div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 NutriGreen · Alimentación saludable asistida por IA</p>
+  </footer>
 
   <script src="main.js"></script>
 </body>

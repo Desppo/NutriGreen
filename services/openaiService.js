@@ -6,11 +6,14 @@ const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 export async function generateDietPlan(calories = 2000, diet = "normal") {
   const prompt = `
-    Genera un plan de dieta equilibrada con desayuno, almuerzo y cena.
+    Genera **dos planes de dieta equilibrada** diferentes con desayuno, almuerzo y cena.
     Calorías aproximadas: ${calories}.
     Tipo de dieta: ${diet}.
-    Devuélvelo en formato JSON válido: 
-    { "breakfast": "...", "lunch": "...", "dinner": "..." }
+    Devuélvelos en formato JSON válido como un array con dos objetos, ejemplo:
+    [
+      { "breakfast": "...", "lunch": "...", "dinner": "..." },
+      { "breakfast": "...", "lunch": "...", "dinner": "..." }
+    ]
     Solo devuelve el JSON, sin texto adicional.
   `;
 
@@ -25,8 +28,8 @@ export async function generateDietPlan(calories = 2000, diet = "normal") {
         model: "llama-3.3-70b-versatile",
         messages: [{ role: "user", content: prompt }],
         temperature: 0.7,
-        max_completion_tokens: 500,
-        response_format: { type: "json_object" }
+        max_completion_tokens: 700
+        // 👆 quitamos response_format
       })
     });
 
@@ -40,7 +43,7 @@ export async function generateDietPlan(calories = 2000, diet = "normal") {
     const text = data.choices[0].message.content.trim();
 
     console.log("Respuesta cruda:", text);
-    return JSON.parse(text);
+    return JSON.parse(text); // ahora será un array con 2 dietas
 
   } catch (error) {
     console.error("Error completo con Groq API:", error.message);

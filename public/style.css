@@ -1,120 +1,151 @@
+/* ====== Layout General ====== */
 body {
-  font-family: Arial, sans-serif;
-  background: #f9fafb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #a7f8d2;
   margin: 0;
-  padding: 20px;
+  padding: 0;
   transition: background 0.3s, color 0.3s;
 }
+
 body.dark-mode {
   background: #1a202c;
   color: #e2e8f0;
 }
 
-h1 {
+/* ====== Header ====== */
+.header {
   text-align: center;
+  padding: 30px 20px 10px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin: 10px 0 5px;
   color: #2d3748;
 }
 
+.title span {
+  color: #2f855a; /* verde saludable */
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+body.dark-mode .title {
+  color: #e2e8f0;
+}
+body.dark-mode .subtitle {
+  color: #a0aec0;
+}
+
+/* ====== Contenedor principal ====== */
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ====== Botón modo oscuro ====== */
+.dark-btn {
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #4a5568;
+  color: #fff;
+  cursor: pointer;
+}
+.dark-btn:hover {
+  background: #2d3748;
+}
+
+/* ====== Formulario ====== */
 .form-container {
-  max-width: 400px;
-  margin: 20px auto;
+  margin: 0 auto 30px;
   padding: 20px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: background 0.3s, box-shadow 0.3s;
+  max-width: 400px;
+  text-align: left;
 }
 body.dark-mode .form-container {
   background: #2d3748;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2d3748;
 }
-input, select, button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e0;
-  font-size: 14px;
-  transition: background 0.3s, color 0.3s, border 0.3s;
-}
-body.dark-mode input,
-body.dark-mode select,
-body.dark-mode button {
-  background: #4a5568;
+body.dark-mode .form-container h2 {
   color: #edf2f7;
-  border: 1px solid #718096;
 }
 
-button {
-  background: #3182ce;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-top: 15px;
-}
-button:hover {
-  background: #2b6cb0;
-}
-
+/* ====== Resultados ====== */
 .result {
-  max-width: 600px;
-  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 40px;
   padding: 20px;
   background: #edf2f7;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: background 0.3s, box-shadow 0.3s;
 }
 body.dark-mode .result {
   background: #2d3748;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.plan {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.plan:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+body.dark-mode .plan {
+  background: #4a5568;
+}
+
+.plan h3 {
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 .meal {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
   margin-bottom: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.5s forwards;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f9fafb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 body.dark-mode .meal {
-  background: #4a5568;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  background: #2d3748;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ====== Footer ====== */
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  background: #befade;
+  color: #4a5568;
 }
-
-/* Estilo para el icono dentro del título */
-.title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px; /* espacio entre icono y texto */
-}
-
-.page-icon {
-  width: 48px;      /* tamaño del icono */
-  height: 48px;
-  border-radius: 12px; /* bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
-/* Animación al pasar el cursor */
-.page-icon:hover {
-  transform: rotate(15deg) scale(1.1);
+body.dark-mode .footer {
+  background: #212733;
+  color: #a0aec0;
 }

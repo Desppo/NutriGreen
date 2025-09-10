@@ -4,15 +4,15 @@ export async function getDietPlan(req, res) {
   const { calories, diet } = req.query;
 
   try {
-    const plan = await generateDietPlan(calories, diet);
+    const plans = await generateDietPlan(calories, diet); // ahora es un array
+
     res.json({
-      message: `Plan para ${calories || "2000"} kcal (${diet || "normal"})`,
-      plan,
+      message: `Dos opciones de plan para ${calories || "2000"} kcal (${diet || "normal"})`,
+      options: plans, // <- renombramos "plan" a "options"
     });
   } catch (error) {
     console.error("Error al generar dieta:", error);
 
-    // Manejo específico de errores de OpenAI
     if (error.code === "insufficient_quota" || error.status === 429) {
       res.status(429).json({
         error: "Se ha alcanzado el límite de uso de la API. Intenta más tarde.",
