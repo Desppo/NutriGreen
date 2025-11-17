@@ -1,0 +1,74 @@
+{
+  "timestamp": 1763419061950,
+  "date": "2025-11-17",
+  "data": {
+    "normal": [
+      {
+        "breakfast": "Huevos revueltos con tocino (300 kcal)",
+        "lunch": "Pollo a la plancha con ensalada (400 kcal)",
+        "dinner": "Pescado al horno con puré de papas (500 kcal)"
+      },
+      {
+        "breakfast": "Avena con frutas y nueces (250 kcal)",
+        "lunch": "Tacos de carne con lechuga y tomate (450 kcal)",
+        "dinner": "Cordero al curry con arroz basmati (550 kcal)"
+      },
+      {
+        "breakfast": "Tostada con aguacate y huevo (200 kcal)",
+        "lunch": "Sándwich de pavo con queso y lechuga (350 kcal)",
+        "dinner": "Costillas de cerdo a la parrilla con coleslaw (600 kcal)"
+      }
+    ],
+    "vegan": [
+      {
+        "breakfast": "Avena con frutas y nueces (250 kcal)",
+        "lunch": "Ensalada de quinoa con verduras y aguacate (400 kcal)",
+        "dinner": "Lentejas al curry con arroz integral (500 kcal)"
+      },
+      {
+        "breakfast": "Tofu revuelto con espinacas y pan integral (200 kcal)",
+        "lunch": "Sándwich de hummus con lechuga y tomate (300 kcal)",
+        "dinner": "Sopa de verduras con pan de centeno (450 kcal)"
+      },
+      {
+        "breakfast": "Batido de frutas con proteína de soja (150 kcal)",
+        "lunch": "Ensalada de garbanzos con aguacate y pan pita (400 kcal)",
+        "dinner": "Berzas al vapor con patatas asadas (350 kcal)"
+      }
+    ],
+    "vegetarian": [
+      {
+        "breakfast": "Huevos revueltos con espinacas y pan integral (200 kcal)",
+        "lunch": "Ensalada de quinoa con verduras y queso feta (400 kcal)",
+        "dinner": "Pasta con salsa de tomate y albóndigas de tofu (500 kcal)"
+      },
+      {
+        "breakfast": "Avena con frutas y nueces (250 kcal)",
+        "lunch": "Sándwich de queso con lechuga y tomate (350 kcal)",
+        "dinner": "Tortilla de patatas con ensalada de lechuga (400 kcal)"
+      },
+      {
+        "breakfast": "Tostada con aguacate y huevo (200 kcal)",
+        "lunch": "Ensalada de lentejas con aguacate y pan pita (450 kcal)",
+        "dinner": "Quesadilla de verduras con guacamole (500 kcal)"
+      }
+    ],
+    "keto": [
+      {
+        "breakfast": "Huevos revueltos con tocino y aguacate (300 kcal)",
+        "lunch": "Pollo a la plancha con ensalada de lechuga y aceitunas (400 kcal)",
+        "dinner": "Pescado al horno con mantequilla y brócoli (500 kcal)"
+      },
+      {
+        "breakfast": "Batido de proteína con crema y aceite de coco (250 kcal)",
+        "lunch": "Tacos de carne con lechuga y queso cheddar (450 kcal)",
+        "dinner": "Cordero al curry con coliflor y mantequilla (550 kcal)"
+      },
+      {
+        "breakfast": "Tostada con aguacate y huevo (200 kcal)",
+        "lunch": "Sándwich de pavo con queso cheddar y lechuga (350 kcal)",
+        "dinner": "Costillas de cerdo a la parrilla con coleslaw y mantequilla (600 kcal)"
+      }
+    ]
+  }
+}
